@@ -25,10 +25,11 @@
 
     /* float - 부모 height를 위해  */
     overflow: hidden;
-/* background-color 빈공간 생성
-    margin-top: 10px;
-    margin-bottom: 10px; */
-    padding: 10px;
+
+    /* background-color 빈공간 생김
+    margin: 10px 0;*/
+    /* background-color 칠해지는 공간 */
+    padding: 10px 0;
 }
 .wrap-main > section{
     /* float 왼쪽 배치 */
