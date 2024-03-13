@@ -9,7 +9,8 @@
 /*  */
 .wrap-footer {
     background-color: azure;
-    /* float 배치 해제 */
+
+    /* float - 동위 - 해제 */
     clear: both;
 }
 .wrap-footer > footer{
@@ -21,10 +22,19 @@
     background-color: #ffd;
     /* 중앙 배치 */
     width: 960px; margin: 0 auto;
+
+    /* float - 부모 height를 위해  */
+    overflow: hidden;
+/* background-color 빈공간 생성
+    margin-top: 10px;
+    margin-bottom: 10px; */
+    padding: 10px;
 }
 .wrap-main > section{
     /* float 왼쪽 배치 */
     width: 750px; float: left;
+
+    margin-right: 10px;
 }
 .wrap-main > aside{
     /* float 왼쪽 배치 */

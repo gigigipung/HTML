@@ -46,3 +46,9 @@ aside input[type=radio]:nth-of-type(2):checked
 }
 
 /*  */
+aside ul > li {
+    border: 1px solid black;
+}
+aside ul > li:not(:last-child) {
+    border-bottom: 0;
+}
