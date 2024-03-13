@@ -1,0 +1,62 @@
+header{
+    position: relative;
+    height: 160px;
+    background-color: antiquewhite;
+    width: 960px;
+    margin: 0 auto;
+}
+nav > a{
+    text-decoration: none;
+}
+nav.nb1{
+    position: absolute;
+    right: 0;
+}
+nav.nb2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+div.logo{
+    position: absolute;
+    left: 50px;
+    bottom: 50%;
+}
+h1{
+    font-size: 1.27em;
+}
+h3{
+    font-size: 1.2em;
+}
+nav> ul{
+    overflow: hidden;
+}
+nav > ul>li{
+    float: left;
+    padding: 5px;
+}
+.wrap-main{
+    width: 960px;
+    margin: 0 auto;
+}
+div > section{
+    float: left;
+    width: 80%;
+}
+div > section > article{
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+div > aside{
+    float: left;
+    width: 20%;
+    background-color: violet;
+}
+
+footer{
+    width: 960px;
+    clear: both;
+    background-color: yellowgreen;
+    margin: 0 auto;
+}
