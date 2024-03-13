@@ -119,23 +119,23 @@ article{
 article:last-child{
     margin-bottom: 0;
 }
-ul{
+nav > ul{
     /* float 의 부모노드 overflow hidden */
     overflow: hidden;
 }
-ul > li {
+nav > ul > li {
     /* display: inline-block; li요소 사이줄바꿈으로 한칸띄워쓰기문제 */
     /* float */
     float: left;
     /* padding: 5px;  내부 a 태그에 padding 넣기*/
     /* border: 1px solid black; */
 }
-nav > ul > li >a{
+nav > ul > li > a {
     border-top: 1px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
 }
-nav > ul > li:first-child > a{
+nav > ul > li:first-child > a {
     border-left: 1px solid black;
 }
 nav.tnb > ul > li:first-child > a {
@@ -147,10 +147,10 @@ nav.tnb > ul > li:last-child > a{
 }
 nav.bnb > ul > li:first-child > a{
     border-left: 1px solid black;
-    border-radius: 5px 0 0 5px;
+    border-radius: 10px 0 0 10px;
 }
 nav.bnb > ul > li:last-child > a{
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 10px 10px 0;
 }
 
 nav.bnb, .logo {
@@ -158,7 +158,7 @@ nav.bnb, .logo {
     clear: both;
 }
 
-a {
+nav a {
     display: inline-block;
     padding: 10px;
     text-decoration: none;
@@ -176,7 +176,32 @@ a:active {
 } 
 */
 
-a:hover {
+nav a:hover {
     color: white;
     background-color: black;
 }
+
+.tab-item > ul > li > a > div:first-child{
+    /*  */
+    float: left;
+    width: 45px;
+}
+.tab-item > ul > li > a > div:last-child{
+    float: left;
+    width: 120px;
+}
+.tab-item > ul > li  {
+    clear: both;
+    padding: 10px;
+}
+.tab-item > ul > li > a  {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
