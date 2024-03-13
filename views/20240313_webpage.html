@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면설계-순서</title>
+<!-- [1] 해상도 - 최적해상도1050px 결정 (최대/최소 지원범위-테스트영역) -->
+<!-- [2] content 영역 960px 80vw 90%, 배치(중앙,왼쪽) -->
+<!-- [3] reset.css 검토 -  폴더 경로 확정 -->
+<link href="/css/reset.css" rel="stylesheet">
+<!-- [4] project명 또는 core.css / projectname.css 폴더경로 - bootstrap, template 등으로 대체 -->
+<!-- [4] 기본색상 10~15개정도 class 미리 만들어두기 -->
+<!-- [4] 폰트family와 크기 5~7개정도 class 미리 만들어두기 -->
+<!-- [4] button 3개 class 미리 만들어두기 -->
+<!-- [4] a 모양 미리 만들어두기 -->
+<link href="/css/webpage_core.css" rel="stylesheet">
+<!-- [5] body Layout 영역 - 화면설계서 -->
+<link href="/css/webpage_layout.css" rel="stylesheet"> 
+
+<!-- header 영역 style -->
+<link href="/css/webpage_header.css" rel="stylesheet">
+<!-- section 영역 style -->
+<link href="/css/webpage_section.css" rel="stylesheet">
+<!-- aside 영역 style -->
+<link href="/css/webpage_aside.css" rel="stylesheet">
+<!-- footer 영역 style -->
+<link href="/css/webpage_footer.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap-header">
+            <header>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam id, aliquid dolores ipsa error
+                ipsum blanditiis at, totam ex quas, obcaecati ratione repellat laboriosam! Nemo necessitatibus sit
+                dignissimos neque exercitationem?
+            </header>
+        </div>
+        <div class="wrap-main">
+            <section>
+                <article>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam id, aliquid dolores ipsa error
+                    ipsum blanditiis at, totam ex quas, obcaecati ratione repellat laboriosam! Nemo necessitatibus sit
+                    dignissimos neque exercitationem?
+                </article>
+                <article>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam id, aliquid dolores ipsa error
+                    ipsum blanditiis at, totam ex quas, obcaecati ratione repellat laboriosam! Nemo necessitatibus sit
+                    dignissimos neque exercitationem?
+                </article>
+            </section>
+            <aside>
+                <div class="tab-item">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div><img src="https://dummyimage.com/45/ccc/000.png" alt="45x45 dummy image"></div>
+                                <div>
+                                    <div>HTML5 </div>
+                                    <div>2024-03-13</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div><img src="https://dummyimage.com/45/ccc/000.png" alt="45x45 dummy image"></div>
+                                <div>
+                                    <div>HTML5 </div>
+                                    <div>2024-03-13</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div><img src="https://dummyimage.com/45/ccc/000.png" alt="45x45 dummy image"></div>
+                                <div>
+                                    <div>HTML5 </div>
+                                    <div>2024-03-13</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div><img src="https://dummyimage.com/45/ccc/000.png" alt="45x45 dummy image"></div>
+                                <div>
+                                    <div>HTML5 </div>
+                                    <div>2024-03-13</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-item">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div><img src="https://dummyimage.com/45/ccc/000.png" alt="45x45 dummy image"></div>
+                                <div>
+                                    <div>CSS </div>
+                                    <div>2024-03-13</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div><img src="https://dummyimage.com/45/ccc/000.png" alt="45x45 dummy image"></div>
+                                <div>
+                                    <div>CSS </div>
+                                    <div>2024-03-13</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div><img src="https://dummyimage.com/45/ccc/000.png" alt="45x45 dummy image"></div>
+                                <div>
+                                    <div>CSS </div>
+                                    <div>2024-03-13</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div><img src="https://dummyimage.com/45/ccc/000.png" alt="45x45 dummy image"></div>
+                                <div>
+                                    <div>CSS </div>
+                                    <div>2024-03-13</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <div class="wrap-footer">
+            <footer>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam id, aliquid dolores ipsa error
+                ipsum blanditiis at, totam ex quas, obcaecati ratione repellat laboriosam! Nemo necessitatibus sit
+                dignissimos neque exercitationem?
+            </footer>
+        </div>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
