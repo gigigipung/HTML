@@ -207,17 +207,23 @@ input[type=radio] {
     /* 공간차지하면서 화면에서 안보이게 함 */
     /* visibility: hidden; */
 }
-input[type=radio]:nth-of-type(1):checked ~ div:nth-of-type(1){
+input[type=radio]:nth-of-type(1):checked ~ div.tab-item:nth-of-type(1){
     display: block;
 }
-input[type=radio]:nth-of-type(1):checked ~ div:nth-of-type(2){
+input[type=radio]:nth-of-type(1):checked ~ div.tab-item:nth-of-type(2){
     display: none;
 }
-input[type=radio]:nth-of-type(2):checked ~ div:nth-of-type(1){
+input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(1){
+    background-color: blue;
+}
+input[type=radio]:nth-of-type(2):checked ~ div.tab-item:nth-of-type(1){
     display: none;
 }
-input[type=radio]:nth-of-type(2):checked ~ div:nth-of-type(2){
+input[type=radio]:nth-of-type(2):checked ~ div.tab-item:nth-of-type(2){
     display: block;
+}
+input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(2){
+    background-color: blue;
 }
 .tab-item > ul > li:nth-child(2n+1){
     background-color: #eee;
@@ -226,9 +232,17 @@ input[type=radio]:nth-of-type(2):checked ~ div:nth-of-type(2){
     background-color: #ccc;
 }
 
-body > div.wrap-main > aside > label{
-    display: inline;
-    padding: 10px;
+aside > label{
+    width: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
     text-decoration: none;
-    color: black;
+    color: red;
+}
+label:hover{
+    background-color: blue;
+}
+label:active{
+    background-color: blue;
 }
