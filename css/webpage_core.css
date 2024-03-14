@@ -1,5 +1,7 @@
 /* 폰트 */
 /* font 정하기 - family, size */
+
+
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.1em;
