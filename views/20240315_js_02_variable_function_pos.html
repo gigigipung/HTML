@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 01</title>
+    <script>
+        function f1 () {
+            a4 = 4;
+            var a3 = 3;  // 지역변수는 함수내부에서 var 선언
+         
+            let f2 = function () {
+                a4 = 4;
+                var a3 = 3;  // 지역변수는 함수내부에서 var 선언
+                console.log("이곳 - 3 : a1 : " + a1);
+                console.log("이곳 - 3 : a2 : " + a2);
+                console.log("이곳 - 3 : a3 : " + a3);
+                console.log("이곳 - 3 : a4 : " + a4);
+            };
+            console.log("이곳 - 3 : a1 : " + a1);
+            console.log("이곳 - 3 : a2 : " + a2);
+            console.log("이곳 - 3 : a3 : " + a3);
+            console.log("이곳 - 3 : a4 : " + a4);
+            f2();
+        }
+        //전역변수로 쓸 변수를 let 선언
+        //let 같은이름으로 중복선언 불가 
+        let a1 = 1;
+        let a2 = 2;
+        let a4;
+    </script>
+</head>
+<body>
+    <h1 id="id2">JavaScript 처음</h1>
+    <h1 class="c2">JavaScript 처음2</h1>
+    <h1 class="c2">JavaScript 처음3</h1>
+    <script>
+        console.log("이곳 -6 : a4 : " + a4);
+        
+        //f2();
+
+        f1();  /// 위 함수 호출 실행
+        console.log("이곳 - 1 : a1 : " + a1);
+        console.log("이곳 - 1 : a2 : " + a2);
+        //지역오류 console.log("이곳 - 1 : a3 : " + a3);
+        console.log("이곳 - 1 : a4 : " + a4);
+        {
+            console.log("이곳 - 2 : a1 : " + a1);
+            console.log("이곳 - 2 : a2 : " + a2);
+            //오류 console.log("이곳 - 2 : a3 : " + a3);
+            console.log("이곳 - 2 : a4 : " + a4);
+        }
+    </script>
+    <script>
+        f1();  /// 위 함수 호출 실행
+        console.log("이곳 - 4 : a1 : " + a1);
+        console.log("이곳 - 4 : a2 : " + a2);
+        //오류 console.log("이곳 - 4 : a3 : " + a3);
+        console.log("이곳 - 4 : a4 : " + a4);
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
