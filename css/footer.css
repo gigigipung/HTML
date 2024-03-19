@@ -212,7 +212,13 @@ footer .list-area li:nth-child(3) p .link {
     margin-top: 10px;
 }
 
-
+footer .conts .noti {
+    color: #777;
+    font-size: 11px;
+    line-height: 15px;
+    padding-left: 236px;
+    margin: 20px 0 30px;
+}
 
 
 
