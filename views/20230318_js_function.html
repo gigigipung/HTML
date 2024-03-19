@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+<script>
+    function f1 ( a1, a2, a3 ){
+        console.log("f1함수실행");
+        console.log(arguments);
+        if(typeof a1 == "undefined"){
+            console.log("a1 기본설정해줄께");
+        } else {
+            console.log(a1);
+        }
+        if(typeof a2 == "undefined"){
+            console.log("a2 기본설정해줄께");
+        } else {
+            console.log(a2);
+        }
+        if(typeof a3 == "undefined"){
+            console.log("a3 기본설정해줄께");
+        } else {
+            console.log(a3);
+            //if( typeof a3 =="function"){
+                a3(); // 익명함수-매개인자로 전달된. 호출
+            //} 
+        }
+    }
+    var f2 = function(){ 
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 4번째 매개인자 값으로 전달됨");
+    };
+    var f3 = function(){ 
+        console.log("익명함수 - 3번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 3번째 매개인자 값으로 전달됨");
+        console.log("익명함수 - 3번째 매개인자 값으로 전달됨");
+    };
+
+    // 함수 실행
+    f1();
+    f1(10);
+    f1("abc");
+    f1(10, 20);
+    f1(10, 20, 30);
+    f1(10, 20, f3, f2);
+    // 정신못차릴래~ f1(10, 20, "abc", 30);
+    // 오류 코드 f1(10, 20, "abc", 30);
+
+    
+    
+
+</script>
+
+</body>
+</html>

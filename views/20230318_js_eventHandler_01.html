@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event handler</title>
+</head>
+<body>
+
+
+<button type="button" id="btn1">버튼1</button>
+<button type="button" id="btn2">버튼2</button>
+<!-- id와 인라인이벤트등록방식 쓰지 마세요. 혼선을 줌 -->
+<button type="button" id="btn3" onclick="cbF3();console.log('이것도')">버튼3</button>
+
+<form method="get" action="#" id="frm-test">
+    <input type="text" name="n1">
+    <button type="submit" onclick="return cbF3();">전달</button>
+</form>
+
+<button type="button" id="btn-add">추가</button>
+<table border="1">
+    <thead>
+        <tr id="tbl-col">
+            <td style="color:red;">컬럼명</td>
+            <td>컬럼명</td>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script>
+    let count = 1;
+    var cbf4 = function(){
+        console.log("cbf4동작확인용 메시지");
+        // 방법 1
+        // var htmlValue = '';
+        // htmlValue += '<tr>';
+        // htmlValue += '    <td>'+count+'</td>';
+        // htmlValue += '    <td>컬럼명'+count+'</td>';
+        // htmlValue += '</tr>';
+        // document.getElementsByTagName("tbody")[0].innerHTML += htmlValue;
+
+        //document.querySelectorAll
+
+        // 방법 2 - DOM 
+        var nodeTr = document.createElement("tr");
+        var nodeTd1 = document.createElement("td");
+        var nodeTd2 = document.createElement("td");
+        var nodeText1 = document.createTextNode(count);
+        var nodeText2 = document.createTextNode("컬럼명"+count);
+        nodeTd1.appendChild(nodeText1);
+        nodeTd2.appendChild(nodeText2);
+        nodeTr.appendChild(nodeTd1);
+        nodeTr.appendChild(nodeTd2);
+        document.getElementsByTagName("tbody")[0].appendChild(nodeTr);
+        count++;
+    }
+    document.getElementById("btn-add").addEventListener("click", cbf4);
+
+
+    
+    var cbF1 = function(){
+        console.log("고전방식: 이벤트 발생하여 callback함수가 호출될수 있도록 ()붙여주고..");
+    };
+    var cbF2 = function(){
+        console.log("표준방식: 이벤트 발생하여 callback함수가 호출될수 있도록 ()붙여주고...");
+    };
+    var cbF3 = function(){
+        console.log("인라인방식: 이벤트 발생하면 따옴표 안의 내용을 그대로 실행");
+        return true;
+    };
+    var frmEle = document.getElementById("frm-test");
+    frmEle.onsubmit = cbF1;
+
+
+    var btn1Elem = document.getElementById("btn1");
+    console.log(btn1Elem);
+    btn1Elem.onclick = cbF1;
+    var btn2Elem = document.getElementById("btn2");
+    btn2Elem.addEventListener("click", cbF2);
+    var btn3Elem = document.getElementById("btn3");
+    // btn3Elem.onclick = cbF1;
+    // btn3Elem.addEventListener("click", cbF2);
+</script>
+
+</body>
+</html>

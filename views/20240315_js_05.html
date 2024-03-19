@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 보충</title>
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 >자료형 - Detail</h1>
+    <script>
+    var a1 = "문자\"열1";
+    console.log(a1);
+    a1 += '문자"열1';
+    console.log(a1);
+    a1 += "문자'열1";
+    console.log(a1);
+    a1 += '문자\'열1';
+    console.log(a1);
+    var result = a1.lastIndexOf('자');
+    console.log(result);
+    </script>
+    <script>
+    var a1 = 0/10;  // 0
+    console.log(a1);console.log(typeof a1);
+    console.log(isFinite(a1));  // false
+    var a1 = 10/0;  // Infinity 라는 값
+    // console.log(a1);console.log(typeof a1);
+    // var a1 = 0/0;  // NaN
+    // console.log(a1);console.log(typeof a1);
+    // var a1 = Math.sqrt(-9);  // NaN 허수
+    // console.log(a1);console.log(typeof a1);
+
+    // var a1 = 100 * "hello";  // NaN - number 표현 안됨.
+    // console.log(a1);console.log(typeof a1);
+    // var a1 = 100 - "hello";  // NaN - number 표현 안됨.
+    // console.log(a1);console.log(typeof a1);
+    // var a1 = 100 / "hello";  // NaN - number 표현 안됨.
+    // console.log(a1);console.log(typeof a1);
+    // var a1 = 100 + "hello";   // + 연결자로 string 
+    // console.log(a1);console.log(typeof a1);
+
+    var a2 = a1 + a1;// Infinity + Infinity ==== Infinity
+    console.log(a2); 
+    console.log(isFinite(a2)); // false
+    console.log(isNaN(a2));  // false
+    var a2 = a1 - a1;// Infinity - Infinity ==== NaN
+    console.log(a2); 
+    console.log(isFinite(a2));  // false
+    console.log(isNaN(a2));  // true
+    var a2 = a1 * a1;// Infinity * Infinity ==== Infinity
+    console.log(a2); 
+    var a2 = a1 / a1;// Infinity / Infinity ==== NaN
+    console.log(a2);   
+
+
+
+
+
+    </script>
+    <h1 id="question">입력한 값은 100보다 큰가? 작은가?</h1>
+    <h2 id="result">출력</h2>
+    <script>
+    var c = window.prompt("숫자를 입력하세요");  // prompt()를 통해 입력 받은 값은 문자입니다.
+    console.log(typeof(c));  // string 
+    // */- (+제외) 연산자와 함께 사용시 문자열을 숫자로 자동 형변환 시에 
+    // 문자열이 숫자가 아닐경우 Not a Number의 약자인 NaN을 리턴하며 숫자의 형태가 아니라는 의미이다. 
+    // console.log( c * 100); // 자동형변환이 되고 숫자 산술 연산함.
+    // console.log( c + 100); // + 문자는 연결자로 형변환 하지 않음.
+    // c += 1;  // NaN
+    // console.log( c );
+    // console.log( typeof c );
+    // console.log( c++ );  // number 형으로 자동형변환
+    // console.log( c );
+    // console.log( typeof c );
+
+    c = Number.parseInt(c);  // string 을 number 로 강제형변환
+    if( c < 100 ) {  
+        var resultText = '<p text-align="center">' + typeof(c) + "형태 "+ c + "는 100보다 작다" + '</p>';
+    } else {
+        var resultText = '<p text-align="center">' + typeof(c) + "형태 "+ c + "는 100보다 크다" + '</p>';
+    }
+    console.log(resultText);
+    document.getElementById("result").innerHTML = resultText;
+    </script>    
+
+
+    <h1>3의 배수 찾기</h1>
+    <script>
+        var num3 = window.prompt("숫자를 입력하세요");
+        var arr = [];
+        var count = 0;
+        // num3 + 1 == num3은 string 형태로 + 가 연결자로 사용됨. 
+        // num3 = Number.parseInt(num3, 16);
+        num3 = Number.parseInt(num3, 10);
+        console.log(num3);
+        for (var i = 1; i < num3 + 1; i++) {
+            if (i % 3 == 0) {
+                arr[count] =i;
+                count++;
+            }
+        }
+        for(var i in arr){
+            document.write(arr[i]+",");
+        }
+        document.write("<p>"+num3+"까지 3의 배수의 개수 : "+count);
+    </script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

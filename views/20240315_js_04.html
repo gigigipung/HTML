@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 01</title>
+    <script>
+       
+    </script>
+</head>
+<body>
+    <h1 id="id2">true / false 자바와 달라요</h1>
+    <h1 class="c2">자료형 object (array포함) 출력console 방법</h1>
+    <script>
+        var a1 = true;  
+        var a2 = 1; 
+        console.log((a1==a2)? "==같다":  "==다르다");
+        var a3 = [];// array 는 object 자료형
+        console.log(typeof a3);  
+        // a3[0]="a";
+        // a3[1]=123;
+        // a3.push("a");
+        // a3.push(function(){console.log(a3의 내부 함수);});
+        console.log(a3);
+        var a3 = { "k 3": "이름띄워쓰기"};  // object 자료형
+        console.log(typeof a3);  
+        a3.k1 = "v1";  // ojbect key :  value 넣는 방법 1
+        a3["k2"] = "v2"; // ojbect key :  value 넣는 방법 2
+        delete(a3.k1);
+        console.log(a3);
+        for( var key in a3 ){
+            console.log(a3[key]);  // 방법 2만 가능함. 방법 1 불가함.
+        }
+
+
+        if(a3){
+            console.log("문자열, 음수, 양수, 실수 - true임")
+        } else {
+            console.log("0, undefined, null, NaN , ''빈문자 - false")
+        }
+
+        var arr = ["apple","banana"];
+        var obj = {k1 : "seoul"
+                , k2 : "daejeon"
+                , key : "이거이거"
+                };
+        console.log(arr);
+        console.log(obj);
+        console.log(arr+":문자와함께작성하면");
+        console.log(obj+":문자와함께작성하면");
+
+    </script>    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
