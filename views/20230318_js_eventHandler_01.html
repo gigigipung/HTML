@@ -35,26 +35,32 @@
     var cbf4 = function(){
         console.log("cbf4동작확인용 메시지");
         // 방법 1
-        // var htmlValue = '';
-        // htmlValue += '<tr>';
-        // htmlValue += '    <td>'+count+'</td>';
-        // htmlValue += '    <td>컬럼명'+count+'</td>';
-        // htmlValue += '</tr>';
+
+        var htmlValue = '';
+        htmlValue += '<tr>';
+        htmlValue += '    <td>'+count+'</td>';
+        htmlValue += '    <td>컬럼명'+count+'</td>';
+        htmlValue += '</tr>';
+        var temp = $("tbody").eq(0).html();
+        $("tbody").eq(0).html(temp+htmlValue);
+        // var temp =document.getElementsByTagName("tbody")[0].innerHTML;
         // document.getElementsByTagName("tbody")[0].innerHTML += htmlValue;
 
-        //document.querySelectorAll
+        // document.querySelectorAll
 
         // 방법 2 - DOM 
-        var nodeTr = document.createElement("tr");
-        var nodeTd1 = document.createElement("td");
-        var nodeTd2 = document.createElement("td");
-        var nodeText1 = document.createTextNode(count);
-        var nodeText2 = document.createTextNode("컬럼명"+count);
-        nodeTd1.appendChild(nodeText1);
-        nodeTd2.appendChild(nodeText2);
-        nodeTr.appendChild(nodeTd1);
-        nodeTr.appendChild(nodeTd2);
-        document.getElementsByTagName("tbody")[0].appendChild(nodeTr);
+
+        // var nodeTr = document.createElement("tr");
+        // var nodeTd1 = document.createElement("td");
+        // var nodeTd2 = document.createElement("td");
+        // var nodeText1 = document.createTextNode(count);
+        // var nodeText2 = document.createTextNode("컬럼명"+count);
+        // nodeTd1.appendChild(nodeText1);
+        // nodeTd2.appendChild(nodeText2);
+        // nodeTr.appendChild(nodeTd1);
+        // nodeTr.appendChild(nodeTd2);
+        // document.getElementsByTagName("tbody")[0].appendChild(nodeTr);
+        
         count++;
     }
     document.getElementById("btn-add").addEventListener("click", cbf4);
