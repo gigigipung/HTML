@@ -4,199 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="css/reset.css" rel="stylesheet">
-    <link href="css/olive.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/fontlink.css" rel="stylesheet">
+    <link href="css/maincust.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
-    <link href="css/login.css" rel="stylesheet">
-
 </head>
 <body>
-    <div id="Container" class="bgf6">
-        <div id="Contents">
-            
-            
-                
-                <div class="loginArea new login">
-                    
-                    
-                    
-                        
-                        
-                            <div class="loginTit">
-                                <h2>로그인</h2>
-                                <p>올리브영의 다양한 서비스와 혜택을 누리세요.</p>
-                            </div>
-                        
-                    
-                    <form id="formLogin" name="formLogin">
-                        <input type="hidden" id="bSId" name="bSId" value="">
-                        <input type="hidden" id="captchaYn" name="captchaYn" value="N">
-                        
-                        <div class="loginForm">
-                            <ul>
-                                <li>
-                                    <label for="loginId" class="ir">아이디를 입력해 주세요.</label>
-                                    <input type="text" id="loginId" placeholder="CJ ONE 통합회원 아이디 입력" name="loginId" width="100" value="" autocomplete="off" title="아이디를 입력해 주세요.">
-                                </li>
-                                <li>
-                                    <label for="password" class="ir">비밀번호를 입력해 주세요.</label>
-                                    <input type="password" value="" id="password" placeholder="비밀번호 (8-12자 영문자+숫자+특수문자)" name="password" width="100" onkeyup="javascript:login.tryLogin(event);" autocomplete="off" title="비밀번호를 입력해 주세요.">
-                                </li>
-                            </ul>
-                            <div class="linkChk">
-                                <div class="save">
-                                    <input type="checkbox" id="chk01" name="saveLoginIdYn" title="아이디 저장 선택" value="Y" checked="checked"><label for="chk01">아이디 저장</label>
-                                    <input type="hidden" name="loginFormYn" value="Y">
-                                </div>
-                                <div class="link">
-                                    <a href="javascript:;" onclick="javascirpt:login.findId();">아이디 찾기</a>
-                                    <a href="javascript:;" onclick="javascirpt:login.findPasswd();">비밀번호 찾기</a>
-                                </div>
-                            </div>
-                            <div class="btnArea">
-                                <button type="button" class="btnGreen" onclick="javascript:login.doLogin();" data-attr="로그인^로그인^로그인">로그인</button>
-                            </div>
-                            
-                                <div class="fast_login clrfix">
-                                    <p class="txt">카카오로 올리브영 간편하게 시작하기</p>
-                                    <div class="area">
-                                        <a href="javascript:loginWithKakao();" class="btnlogin kakao" data-attr="로그인^카카오로그인^카카오 로그인"><span class="icon">카카오로 시작하기</span></a>
-                                    </div>
-                                </div>
-                            
-                            <div class="info renew-info">
-                                <div class="info-box">
-                                    <div class="logo-box">
-                                        <img src="https://static.oliveyoung.co.kr/pc-static-root/image/login/ico_cjone_230828.png" alt="CJ ONE 로고 이미지">
-                                    </div>
-                                    <p>CJ ONE 통합회원으로 가입하시면 올리브영의<br>다양한 서비스를 이용하실 수 있습니다.</p>
-                                </div>
-                                
-                                
-                                    
-                                    
-                                        <a href="javascript:login.memberJoin('N', '');" class="btnCjone" id="memberJoin" data-attr="로그인^회원가입^cjone통합회원가입">CJ ONE 통합 가입</a>
-                                    
-                                
-                            </div>
-                        </div>
-                    </form>
+    <div class="wrapper">
+        
+        <div class="wrapper__header">
+        </div>
+        <div class="wrapper__body">
+            <div class="main_customer_box">
+                <div class="notice_area">
+                    <h4>공지사항</h4>
+                    <p class="notice_cont">새로운 소식이 없어요.</p>
+                    <a href="#" class="more_view">더보기<img></a>
+                </div>
+                <div class="customer_area">
+                    <h4>고객센터<br>이용안내</h4>
+                    <div class="tel_info">
+                        <ul>
+                            <li>
+                                <strong>온라인몰 고객센터</strong>
+                                <img src="https://static.oliveyoung.co.kr/pc-static-root/image/main/img_online_tel.png"
+                                    alt="1522-0882">
+                            </li>
+                            <li>
+                                <strong>매장 고객센터</strong>
+                                <img src="https://static.oliveyoung.co.kr/pc-static-root/image/main/img_offline_tel.png"
+                                    alt="1577-4887">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="online_info">
+                        <p class="time_info">고객센터 운영시간 [평일 09:00 - 18:00]</p>
+                        <p>주말 및 공휴일은 1:1문의하기를 이용해주세요.<br>업무가 시작되면 바로 처리해드립니다 </p>
+                        <button class="btnInquiry" onclick=""><span></span>1:1문의하기</button>
+                        <button class="btnFaqTop" onclick=""><span></span>자주하는 질문</button>
+                    </div>
+    
+                </div>
+                <div class="app_down_link">
+                    <img src="https://static.oliveyoung.co.kr/pc-static-root/image/main/img_mobile_app.png"
+                        alt="올리브영 모바일 웹-앱을 설치하고 다양한 혜택을 누리세요!">
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="footer-one">
-                <div class="conts">
-                    <ul class="footer-one-list">
-                        <li><a class="brandstory" href=>회사소개</a></li>
-                        <li><a class="recruit" href="#">채용안내</a></li>
-                        <li><a class="prvsuser" href="#">가맹점 개설문의</a></li>
-                        <li><a class="cjoyp" href="#" target="_blank">상품입점 및 제휴문의</a></li>
-                        <li><a class="cyberAudit" href="#">사이버 감사실</a></li>
-                        <li><a class="faqList" href="#">고객센터</a></li>
-                    </ul>
-                    <div class="sel_family_group">
-                        <a href="#" class="sel_option" title="상세내용 보기">CJ그룹 계열사 바로가기</a>
-                        <div class="sel_option_list hide">
-                            <dl>
-                                <dt>CJ그룹</dt>
-                                <dd><a href="#" target="_blank" title="CJ 주식회사 새창으로 열기">CJ주식회사</a></dd>
-                            </dl>
-                            <dl>
-                                
-                                <dt>식품 &amp; 식품서비스</dt>
-                                <dd><a href="#" target="_blank" title="CJ제일제당 (식품) 새창으로 열기">CJ제일제당</a></dd>
-                                <dd><a href="#" target="_blank" title="CJ푸드빌 새창으로 열기">CJ푸드빌</a></dd>
-                                <dd><a href="#" target="_blank" title="CJ프레시웨이 새창으로 열기">CJ프레시웨이</a></dd>
-                                
-                            </dl>
-                            <dl>
-                                <dt>생명공학</dt>
-                                <dd><a href="#" target="_blank" title="CJ제일제당 (바이오) 새창으로 열기">CJ제일제당 BIO사업부문</a></dd>
-                                <dd><a href="#" target="_blank" title="CJ Feed&amp;Care 새창으로 열기">CJ Feed&amp;Care</a></dd>
-                                
-                                
-                            </dl>
-                            <dl>
-                                <dt>물류 &amp; 신유통</dt>
-                                <dd><a href="#" target="_blank" title="CJ대한통운 새창으로 열기">CJ대한통운</a></dd>
-                                <dd><a href="#" target="_blank" title="CJ대한통운 (건설) 새창으로 열기">CJ대한통운 건설부문</a></dd>
-                                <dd><a href="#" target="_blank" title="CJ올리브영 새창으로 열기">CJ올리브영</a></dd>
-                                <dd><a href="#" target="_blank" title="CJ올리브네트웍스 (IT사업) 새창으로 열기">CJ올리브네트웍스</a></dd>
-                                <dd><a href="#" target="_blank" title="CJ ENM (오쇼핑) 새창으로 열기">CJ ENM 커머스부문</a></dd>
-                                
-                            </dl>
-                            <dl>
-                                <dt>엔터테인먼트 &amp; 미디어</dt>
-                                <dd><a href="#" target="_blank" title="CJ ENM (E&amp;M)새창으로 열기">CJ ENM 엔터테인먼트부문</a></dd>
-                                <dd><a href="#" target="_blank" title="CJ CGV 새창으로 열기">CJ CGV</a></dd>
-    
-                            </dl>
+        <div class="wrapper__footer">
+            <footer>
+                <div class="footer-one">
+                    <div class="conts">
+                        <ul class="footer-one-list">
+                            <li><a class="brandstory" href=>회사소개</a></li>
+                            <li><a class="recruit" href="#">채용안내</a></li>
+                            <li><a class="prvsuser" href="#">가맹점 개설문의</a></li>
+                            <li><a class="cjoyp" href="#" target="_blank">상품입점 및 제휴문의</a></li>
+                            <li><a class="cyberAudit" href="#">사이버 감사실</a></li>
+                            <li><a class="faqList" href="#">고객센터</a></li>
+                        </ul>
+                        <div class="sel_family_group">
+                            <a href="#" class="sel_option" title="상세내용 보기">CJ그룹 계열사 바로가기</a>
+                            <div class="sel_option_list hide">
+                                <dl>
+                                    <dt>CJ그룹</dt>
+                                    <dd><a href="#" target="_blank" title="CJ 주식회사 새창으로 열기">CJ주식회사</a></dd>
+                                </dl>
+                                <dl>
+                                    
+                                    <dt>식품 &amp; 식품서비스</dt>
+                                    <dd><a href="#" target="_blank" title="CJ제일제당 (식품) 새창으로 열기">CJ제일제당</a></dd>
+                                    <dd><a href="#" target="_blank" title="CJ푸드빌 새창으로 열기">CJ푸드빌</a></dd>
+                                    <dd><a href="#" target="_blank" title="CJ프레시웨이 새창으로 열기">CJ프레시웨이</a></dd>
+                                    
+                                </dl>
+                                <dl>
+                                    <dt>생명공학</dt>
+                                    <dd><a href="#" target="_blank" title="CJ제일제당 (바이오) 새창으로 열기">CJ제일제당 BIO사업부문</a></dd>
+                                    <dd><a href="#" target="_blank" title="CJ Feed&amp;Care 새창으로 열기">CJ Feed&amp;Care</a></dd>
+                                    
+                                    
+                                </dl>
+                                <dl>
+                                    <dt>물류 &amp; 신유통</dt>
+                                    <dd><a href="#" target="_blank" title="CJ대한통운 새창으로 열기">CJ대한통운</a></dd>
+                                    <dd><a href="#" target="_blank" title="CJ대한통운 (건설) 새창으로 열기">CJ대한통운 건설부문</a></dd>
+                                    <dd><a href="#" target="_blank" title="CJ올리브영 새창으로 열기">CJ올리브영</a></dd>
+                                    <dd><a href="#" target="_blank" title="CJ올리브네트웍스 (IT사업) 새창으로 열기">CJ올리브네트웍스</a></dd>
+                                    <dd><a href="#" target="_blank" title="CJ ENM (오쇼핑) 새창으로 열기">CJ ENM 커머스부문</a></dd>
+                                    
+                                </dl>
+                                <dl>
+                                    <dt>엔터테인먼트 &amp; 미디어</dt>
+                                    <dd><a href="#" target="_blank" title="CJ ENM (E&amp;M)새창으로 열기">CJ ENM 엔터테인먼트부문</a></dd>
+                                    <dd><a href="#" target="_blank" title="CJ CGV 새창으로 열기">CJ CGV</a></dd>
+        
+                                </dl>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-two">
-                <div class="conts">
-                    <ul class="list-area">
-                        <li>
-                            <p class="logo">
-                                <a href="#">
-                                            <img src="https://static.oliveyoung.co.kr/pc-static-root/image/footer/foot_logo.png" alt="OLIVEYOUNG">
-                                </a>
-                            </p>
-                            <h2>씨제이올리브영 주식회사</h2>
-                            <p>대표이사 : 이선정 | 사업자등록번호 : 809-81-01574</p>
-                            <p>주소 : (04323) 서울특별시 용산구 한강대로 372, 24층 <br>(동자동, KDB타워)</p>
-                            <p>호스팅사업자 : CJ 올리브네트웍스</p>
-                            <p>통신판매업신고번호 : 2019-서울용산-1428</p>
-                            <p><a href="mailto:oliveweb@cj.net" class="email_addr">이메일 : oliveweb@cj.net</a></p>
-                            <p><a class="link" href="javascript:common.link.openFtcBizInfo();" title="새창 열림">사업자 정보확인 &gt;</a></p>
-                        </li>
-                        <li>
-                            <ul class="list-link">
-                                <li><a href="javascript:common.link.moveTermsPage();">이용약관</a><a href="javascript:common.link.moveLegalPage();">법적고지</a></li>
-                                <li><a href="javascript:common.link.movePrivacyPage();">개인정보처리방침</a></li>
-                                <li><a href="javascript:common.link.moveYouthProtectionPage();">청소년보호방침</a></li>
-                                <li><a href="javascript:common.link.moveMultimediaPage();">영상정보처리기기 운영/관리 방침</a></li>
-                                <li><a href="javascript:common.link.moveDenyEmailPage();">이메일무단수집거부</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h2>하나은행 구매안전 서비스</h2>
-                            <p>
-                                올리브영은 현금 결제한 금액에 대해<br>
-                                하나은행과 채무지급보증 계약을체결<br>
-                                하여 안전한 거래를 보장하고 있습니다<br>
-                                <a class="link" href="javascript:common.link.openEscrowPopup('https://static.oliveyoung.co.kr/pc-static-root/html/etc/escrowPopup.html','agree',665,925);" title="새창 열림">서비스 가입사실 확인 &gt;</a>
-                            </p>
-                        </li>
-                    </ul>
-                    <div class="noti">올리브영 홈페이지에서 판매되는 상품 중에는 올리브영에 입점한 개별 판매자가 판매하는 상품이 포함되어 있습니다. 개별 판매자의 판매 상품의 경우, 올리브영은 통신판매중개자로서 통신판매의 당사자가 아니며 판매자가 등록한 상품정보 및 거래 정보 등에 대하여 책임을 부담하지 않습니다.</div>
-                </div>
-            </div>
-            <div class="fourConts">
-                <div class="conts">
-                    <ol>
-                        <li class="isms">정보보호 및 개인정보보호 관리체계 ISMS-P 인증 획득
-                            <span class="bar">인증 범위 : CJ올리브영 쇼핑몰 운영</span>
-                            <span class="bar">유효기간 : 2023.12.06~2026.12.05</span>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-            <div class="threeConts">
-                <div class="conts">
-                    <p class="copyright">Copyright ⓒ CJ OliveYoung. All Rights Reserved.</p>
-                    <div class="sns">
-                        <h2>OLIVE YOUNG SNS</h2>
-                        <a class="facebook" href="https://www.facebook.com/OLIVEYOUNG" title="페이지 이동" target="_blank"><img src="https://static.oliveyoung.co.kr/pc-static-root/image/footer/iconf_facebook.png" alt="페이스북"></a>
-                        <a class="insta" href="https://www.instagram.com/oliveyoung_official/" title="페이지 이동" target="_blank"><img src="https://static.oliveyoung.co.kr/pc-static-root/image/footer/iconf_instagram.png" alt="인스타그램"></a>
-                        <a class="youtube" href="https://www.youtube.com/user/cjoliveyoung/" title="페이지 이동" target="_blank"><img src="https://static.oliveyoung.co.kr/pc-static-root/image/footer/iconf_youtube.png" alt="유튜브"></a>
-                        <a class="kakao" href="javascript:common.link.openKakao();" title="페이지 이동"><img src="https://static.oliveyoung.co.kr/pc-static-root/image/footer/iconf_kakaotalk.png" alt="카카오톡"></a>
+                <div class="footer-two">
+                    <div class="conts">
+                        <ul class="list-area">
+                            <li>
+                                <p class="logo">
+                                    <a href="#">
+                                                <img src="https://static.oliveyoung.co.kr/pc-static-root/image/footer/foot_logo.png" alt="OLIVEYOUNG">
+                                    </a>
+                                </p>
+                                <h2>씨제이올리브영 주식회사</h2>
+                                <p>대표이사 : 이선정 | 사업자등록번호 : 809-81-01574</p>
+                                <p>주소 : (04323) 서울특별시 용산구 한강대로 372, 24층 <br>(동자동, KDB타워)</p>
+                                <p>호스팅사업자 : CJ 올리브네트웍스</p>
+                                <p>통신판매업신고번호 : 2019-서울용산-1428</p>
+                                <p><a href="mailto:oliveweb@cj.net" class="email_addr">이메일 : oliveweb@cj.net</a></p>
+                                <p><a class="link" href="javascript:common.link.openFtcBizInfo();" title="새창 열림">사업자 정보확인 &gt;</a></p>
+                            </li>
+                            <li>
+                                <ul class="list-link">
+                                    <li><a href="javascript:common.link.moveTermsPage();">이용약관</a><a href="javascript:common.link.moveLegalPage();">법적고지</a></li>
+                                    <li><a href="javascript:common.link.movePrivacyPage();">개인정보처리방침</a></li>
+                                    <li><a href="javascript:common.link.moveYouthProtectionPage();">청소년보호방침</a></li>
+                                    <li><a href="javascript:common.link.moveMultimediaPage();">영상정보처리기기 운영/관리 방침</a></li>
+                                    <li><a href="javascript:common.link.moveDenyEmailPage();">이메일무단수집거부</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>하나은행 구매안전 서비스</h2>
+                                <p>
+                                    올리브영은 현금 결제한 금액에 대해<br>
+                                    하나은행과 채무지급보증 계약을체결<br>
+                                    하여 안전한 거래를 보장하고 있습니다<br>
+                                    <a class="link" href="javascript:common.link.openEscrowPopup('https://static.oliveyoung.co.kr/pc-static-root/html/etc/escrowPopup.html','agree',665,925);" title="새창 열림">서비스 가입사실 확인 &gt;</a>
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="noti">올리브영 홈페이지에서 판매되는 상품 중에는 올리브영에 입점한 개별 판매자가 판매하는 상품이 포함되어 있습니다. 개별 판매자의 판매 상품의 경우, 올리브영은 통신판매중개자로서 통신판매의 당사자가 아니며 판매자가 등록한 상품정보 및 거래 정보 등에 대하여 책임을 부담하지 않습니다.</div>
                     </div>
                 </div>
-            </div>
-        </footer>
+                <div class="fourConts">
+                    <div class="conts">
+                        <ol>
+                            <li class="isms">정보보호 및 개인정보보호 관리체계 ISMS-P 인증 획득
+                                <span class="bar">인증 범위 : CJ올리브영 쇼핑몰 운영</span>
+                                <span class="bar">유효기간 : 2023.12.06~2026.12.05</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="threeConts">
+                    <div class="conts">
+                        <p class="copyright">Copyright ⓒ CJ OliveYoung. All Rights Reserved.</p>
+                        <div class="sns">
+                            <h2>OLIVE YOUNG SNS</h2>
+                            <a class="facebook" href="https://www.facebook.com/OLIVEYOUNG" title="페이지 이동" target="_blank"><img src="https://static.oliveyoung.co.kr/pc-static-root/image/footer/iconf_facebook.png" alt="페이스북"></a>
+                            <a class="insta" href="https://www.instagram.com/oliveyoung_official/" title="페이지 이동" target="_blank"><img src="https://static.oliveyoung.co.kr/pc-static-root/image/footer/iconf_instagram.png" alt="인스타그램"></a>
+                            <a class="youtube" href="https://www.youtube.com/user/cjoliveyoung/" title="페이지 이동" target="_blank"><img src="https://static.oliveyoung.co.kr/pc-static-root/image/footer/iconf_youtube.png" alt="유튜브"></a>
+                            <a class="kakao" href="javascript:common.link.openKakao();" title="페이지 이동"><img src="https://static.oliveyoung.co.kr/pc-static-root/image/footer/iconf_kakaotalk.png" alt="카카오톡"></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
