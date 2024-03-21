@@ -4,14 +4,11 @@
     margin-top: 80px;
     letter-spacing: -.01em;
 }
-.main_brand_wrap .main_sub_title{
-    font-size: 22px;
-}
 .main_brand_wrap .main_sub_tit {
     height: auto;
     margin-top: 0;
     line-height: 28px;
-    }
+}
 .main_sub_tit {
     height: 40px;
     margin: 51px 0 8px;
@@ -20,14 +17,18 @@
     text-align: center;
     line-height: 40px;
 }
-.name_brand_wrap{
+.home-category {
     position: relative;
     padding: 20px 0;
     text-align: center;
 }
-.name_brand_wrap  li{
-    margin-left: 10px;
-}
-.name_brand_wrap  label{
-    text-align: center;
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    transition-property: transform;
 }
