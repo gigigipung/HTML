@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        .continaer { /* 비주얼 영역을 가운데 정렬하기 위한 컨테이너 */ 
+    max-width: 1020px; height: 200px; margin: 0 auto; outline: 1px solid red;
+}
+.slick-arrow {  /* 컨트롤 버튼 공통 */
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    z-index: 10; 
+    width: 72px;
+    height: 72px;
+    text-indent: -9999px;
+    border: none;
+}
+.slick-next { /* 다음 컨트롤러 */
+    right: 4%; 
+    left: unset;
+    background: url(/img/visual_rbtn.png) no-repeat rgba(0 ,0, 0, 0.4);
+}
+.slick-prev { /* 이전 컨트롤러 */
+    background: url(/img/visual_lbtn.png) no-repeat rgba(0 ,0, 0, 0.4);
+}
+    </style>
+</head>
+<body>
+    <div class="continaer">
+        <div class="visual">
+          <div><img src="img/visual_bg.jpg" alt="">1111111111111</div>
+          <div><img src="img/visual_bg2.jpg" alt="">22222222222222222</div>
+          <div><img src="img/visual_bg3.jpg" alt="">333333333333333</div>
+        </div>
+      </div>
+      <script>
+      $('.visual').slick({
+        autoplay : true, // 기본값  false 
+        autoplaySpeed : 1000, // 기본값 3000
+    });
+</script>
+</body>
+</html>
