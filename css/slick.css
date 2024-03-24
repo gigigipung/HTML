@@ -117,7 +117,7 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
-.slick-arrow {
+.contain .slick-arrow {
     /* 컨트롤 버튼 공통 */
     position: absolute;
     top: 50%;
@@ -130,7 +130,15 @@
     background: url(https://static.oliveyoung.co.kr/pc-static-root/image/comm/ico_arrow40x40_2.png) no-repeat;
 }
 
-.slick-next {
+.contain .slick-next {
+    /* 다음 컨트롤러 */
+    right: -4%;
+    left: unset;
+    background-position: -40px 0;
+    
+}
+
+.today_new_goods_slide .slick-next {
     /* 다음 컨트롤러 */
     right: -4%;
     left: unset;
